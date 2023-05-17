@@ -1,18 +1,18 @@
 // Styles
-import { Container, Flex } from "@/styles/Global";
-import { Text } from "@/styles/Text";
-import { Button } from "@/styles/Buttons";
+import { Container, Flex } from '@/styles/Global'
+import { Text } from '@/styles/Text'
+import { Button } from '@/styles/Buttons'
 
 // Components
-import { Stack } from "@/components/Stack";
-import { Project } from "@/components/Project";
-import { Contacts } from "@/components/Contacts";
+import { Stack } from '@/components/Stack'
+import { Project } from '@/components/Project'
+import { Contacts } from '@/components/Contacts'
 
 // Data
-import { stackData } from "@/utils/stackData";
-import { userData } from "@/utils/userData";
+import { stackData } from '@/utils/stackData'
+import { userData } from '@/utils/userData'
 
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa'
 
 // Page Style
 import {
@@ -25,14 +25,14 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
-} from "./style";
+} from './style'
 
 export const Home = (): JSX.Element => {
-  const gihubUrl = `https://github.com/${userData.githubUser}`;
-  const portfolioUrl = `https://github.com/${userData.githubUser}/my-portfolio`;
+  const gihubUrl = `https://github.com/${userData.githubUser}`
+  const portfolioUrl = `https://github.com/${userData.githubUser}/portfolio`
 
   return (
-    <main id="home">
+    <main id='home'>
       <Header>
         <Container>
           <HeaderContent>
@@ -41,39 +41,34 @@ export const Home = (): JSX.Element => {
                 src={`https://github.com/${userData.githubUser}.png`}
                 alt={userData.nameUser}
                 title={userData.nameUser}
-                width={"48px"}
-                height={"48px"}
+                width={'48px'}
+                height={'48px'}
               />
-              <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
+              <Text color='grey4'>
+                Olá, meu nome é {userData.nameUser} - Taubaté, SP e tenho 20
+                anos
+              </Text>
             </Flex>
-            <Text as="h1" type="heading1" color="grey5">
-            I{" "}
-              <Text as="span" type="heading1" color="brand1">
-                love
-              </Text>{" "}
-              creating and{" "}
-              <Text as="span" type="heading1" color="brand1">
-                developing
-              </Text>{" "}
-              projects
+            <Text as='h1' type='heading1' color='grey5'>
+              Eu amo criar e desenvolver projetos
             </Text>
-            <Text type="body1" color="grey2">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
+            <Text type='body1' color='grey2'>
+              Estou a procura do meu primeiro emprego para ingressar na área de
+              programação, o qual sou apaixonado desde criança
             </Text>
             <HeaderButtonsArea>
-              <Button as="a" type="primary" href="#projects">
-                See Projects
+              <Button as='a' type='primary' href='#projects'>
+                Ver projetos
               </Button>
-              <Button as="a" type="outline" target="_blank" href={portfolioUrl}>
-                See my portfolio source code
+              <Button as='a' type='outline' target='_blank' href={portfolioUrl}>
+                Veja o códido-fonte do meu portfólio
               </Button>
               <Button
-                color="grey5"
-                as="a"
-                css={{ "&:hover": { color: "$grey1" } }}
-                type="circle"
-                target="_blank"
+                color='grey5'
+                as='a'
+                css={{ '&:hover': { color: '$grey1' } }}
+                type='circle'
+                target='_blank'
                 href={gihubUrl}
               >
                 <FaGithub />
@@ -87,18 +82,15 @@ export const Home = (): JSX.Element => {
           </HeaderContent>
         </Container>
       </Header>
-      <ProjectsArea id="projects">
+      <ProjectsArea id='projects'>
         <Container>
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
-              <Text as="h2" type="heading4" color="grey4">
-                My projects
+              <Text as='h2' type='heading4' color='grey4'>
+                Meu projetos
               </Text>
-              <Text as="p" type="body1" color="grey2">
-                Some of my{" "}
-                <Text as="span" color="brand5">
-                  side projects
-                </Text>
+              <Text as='p' type='body1' color='grey2'>
+                Alguns dos meu projetos
               </Text>
             </ProjectsAreaSocialMediaMessage>
             <ProjectsAreaContent>
@@ -109,5 +101,5 @@ export const Home = (): JSX.Element => {
       </ProjectsArea>
       <Contacts />
     </main>
-  );
-};
+  )
+}
